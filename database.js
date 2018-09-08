@@ -21,7 +21,7 @@ module.exports = class Database {
     async connect() {
         try {
             this.connection = await mongoose.connect('mongodb://localhost:27017/node-blog');
-        } catch {
+        } catch (e) {
             console.log('Could not connect to database');
         }
 
